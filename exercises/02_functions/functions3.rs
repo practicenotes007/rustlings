@@ -6,5 +6,5 @@ fn call_me(num: u8) {
 
 fn main() {
     // TODO: Fix the function call.
-    call_me();
+    call_me(3); // 添加一个 u8 类型的参数
 }
