@@ -5,7 +5,8 @@ mod sausage_factory {
         String::from("Ginger")
     }
 
-    fn make_sausage() {
+    // 将 make_sausage 函数标记为 pub，使其对外公开
+    pub fn make_sausage() {
         get_secret_recipe();
         println!("sausage!");
     }
