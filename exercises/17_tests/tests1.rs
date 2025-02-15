@@ -11,13 +11,14 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
-    // TODO: Import `is_even`. You can use a wildcard to import everything in
-    // the outer module.
+    // 导入is_even函数
+    use super::*;
 
     #[test]
     fn you_can_assert() {
-        // TODO: Test the function `is_even` with some values.
-        assert!();
-        assert!();
+        // 测试偶数
+        assert!(is_even(2));
+        // 测试奇数
+        assert!(!is_even(3));
     }
 }

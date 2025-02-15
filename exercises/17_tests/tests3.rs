@@ -26,24 +26,23 @@ mod tests {
 
     #[test]
     fn correct_width_and_height() {
-        // TODO: This test should check if the rectangle has the size that we
-        // pass to its constructor.
+        // 检查矩形的宽度和高度是否正确
         let rect = Rectangle::new(10, 20);
-        assert_eq!(todo!(), 10); // Check width
-        assert_eq!(todo!(), 20); // Check height
+        assert_eq!(rect.width, 10); // 检查宽度
+        assert_eq!(rect.height, 20); // 检查高度
     }
 
-    // TODO: This test should check if the program panics when we try to create
-    // a rectangle with negative width.
     #[test]
+    #[should_panic(expected = "Rectangle width and height must be positive")]
     fn negative_width() {
+        // 测试当矩形宽度为负数时是否会panic
         let _rect = Rectangle::new(-10, 10);
     }
 
-    // TODO: This test should check if the program panics when we try to create
-    // a rectangle with negative height.
     #[test]
+    #[should_panic(expected = "Rectangle width and height must be positive")]
     fn negative_height() {
+        // 测试当矩形高度为负数时是否会panic
         let _rect = Rectangle::new(10, -10);
     }
 }

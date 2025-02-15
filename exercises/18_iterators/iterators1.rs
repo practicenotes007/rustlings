@@ -12,14 +12,14 @@ mod tests {
     fn iterators() {
         let my_fav_fruits = ["banana", "custard apple", "avocado", "peach", "raspberry"];
 
-        // TODO: Create an iterator over the array.
-        let mut fav_fruits_iterator = todo!();
+        // 创建数组的迭代器
+        let mut fav_fruits_iterator = my_fav_fruits.iter();
 
         assert_eq!(fav_fruits_iterator.next(), Some(&"banana"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
+        assert_eq!(fav_fruits_iterator.next(), Some(&"custard apple")); // 替换为正确的元素
         assert_eq!(fav_fruits_iterator.next(), Some(&"avocado"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
+        assert_eq!(fav_fruits_iterator.next(), Some(&"peach")); // 替换为正确的元素
         assert_eq!(fav_fruits_iterator.next(), Some(&"raspberry"));
-        assert_eq!(fav_fruits_iterator.next(), todo!()); // TODO: Replace `todo!()`
+        assert_eq!(fav_fruits_iterator.next(), None); // 迭代器结束，返回 `None`
     }
 }
