@@ -7,10 +7,10 @@ struct Point {
 fn main() {
     let optional_point = Some(Point { x: 100, y: 200 });
 
-    // TODO: Fix the compiler error by adding something to this match statement.
+    // 修复编译器错误，处理 `Some` 和 `None` 的情况
     match optional_point {
         Some(p) => println!("Co-ordinates are {},{}", p.x, p.y),
-        _ => panic!("No match!"),
+        None => println!("No point found!"),
     }
 
     println!("{optional_point:?}"); // Don't change this line.
