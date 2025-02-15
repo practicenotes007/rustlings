@@ -3,7 +3,7 @@
 // shared value: `JobStatus.jobs_done`
 
 use std::sync::{Arc, Mutex};
-use std::{sync::Arc, thread, time::Duration};
+use std::{thread, time::Duration};
 
 struct JobStatus {
     jobs_done: u32,
