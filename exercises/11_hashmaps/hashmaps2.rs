@@ -1,12 +1,11 @@
-// We're collecting different fruits to bake a delicious fruit cake. For this,
-// we have a basket, which we'll represent in the form of a hash map. The key
-// represents the name of each fruit we collect and the value represents how
-// many of that particular fruit we have collected. Three types of fruits -
-// Apple (4), Mango (2) and Lychee (5) are already in the basket hash map. You
-// must add fruit to the basket so that there is at least one of each kind and
-// more than 11 in total - we have a lot of mouths to feed. You are not allowed
-// to insert any more of the fruits that are already in the basket (Apple,
-// Mango, and Lychee).
+// 我们正在收集不同的水果来烘焙美味的水果蛋糕。为此，
+// 我们有一个篮子，我们将以哈希映射的形式表示它。键
+// 代表我们收集的每种水果的名称，值代表我们收集的
+// 该特定水果的数量。篮子哈希映射中已经存在三种水果 -
+// 苹果（4个）、芒果（2个）和荔枝（5个）。你必须
+// 向篮子中添加水果，以确保至少有一种每种类型的水果，
+// 并且总数超过11个 - 我们需要喂饱很多人。你不允许
+// 再添加已经存在于篮子中的水果（苹果、芒果和荔枝）。
 
 use std::collections::HashMap;
 
@@ -29,21 +28,23 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
     ];
 
     for fruit in fruit_kinds {
-        // TODO: Insert new fruits if they are not already present in the
-        // basket. Note that you are not allowed to put any type of fruit that's
-        // already present!
+        // 如果篮子中还没有该水果，则插入新水果。
+        // 注意，你不允许再添加已经存在于篮子中的任何类型的水果！
+        if !basket.contains_key(&fruit) {
+            basket.insert(fruit, 1);
+        }
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里可选地进行实验。
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    // Don't modify this function!
+    // 不要修改这个函数！
     fn get_fruit_basket() -> HashMap<Fruit, u32> {
         let content = [(Fruit::Apple, 4), (Fruit::Mango, 2), (Fruit::Lychee, 5)];
         HashMap::from_iter(content)
